@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuente Pokémon -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #ffcb05; /* Amarillo Pokémon */
+            color: #2a75bb; /* Azul Pokémon */
+        }
+        h1 {
+            color: #cc0000; /* Rojo Pokémon */
+        }
+        .btn-pokemon {
+            background-color: #cc0000;
+            color: white;
+            border: 2px solid #2a75bb;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+        .btn-pokemon:hover {
+            background-color: #ffcb05;
+            color: #2a75bb;
+        }
+        .hero-section {
+            background-image: url('ruta/a/tu/imagen-pokemon.jpg'); /* Fondo temático */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px #000;
+        }
+        footer {
+            background-color: #2a75bb;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección Hero (Portada) -->
+    <div class="hero-section">
+        <div>
+            <h1>Bienvenido al Dashboard Pokémon</h1>
+            <p>¡Explora el mundo de los Pokémon!</p>
+            <a href="/pokemon/dashboard/" class="btn btn-pokemon">Ver Lista de Pokémones</a>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container my-5">
+        <h2 class="text-center">¿Qué puedes hacer aquí?</h2>
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <i class="fas fa-list fa-3x mb-3"></i>
+                <h3>Ver Lista de Pokémones Voladores</h3>
+                <p>Explora todos los Pokémones disponibles.</p>
+                <a href="/pokemon/voladores/" class="btn btn-pokemon">Ver Lista</a>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-weight fa-3x mb-3"></i>
+                <h3>Filtrar por Peso</h3>
+                <p>Encuentra Pokémones por su peso.</p>
+                <a href="/pokemon/peso" class="btn btn-pokemon">Por Peso</a>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-leaf fa-3x mb-3"></i>
+                <h3>Filtrar por Tipo</h3>
+                <p>Descubre Pokémones de tipo Grass.</p>
+                <a href="/pokemon/tipoGrass" class="btn btn-pokemon">Tipo Grass</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pokémon App. Todos los derechos reservados.</p>
+        <p>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS (opcional, si necesitas funcionalidades de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

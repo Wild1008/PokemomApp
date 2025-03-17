@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Pokemon entre 30 y 60 Kg</title>  
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+        <style>
+            body {
+                font-family: 'Press Start 2P', cursive;
+                background-color: #ffcb05; /* Amarillo Pokémon */
+                color: #2a75bb; /* Azul Pokémon */
+            }
+            h1 {
+                color: #cc0000; /* Rojo Pokémon */
+            }
+            .hero-section {
+                background-image: url('ruta/a/tu/imagen-pokemon.jpg'); /* Fondo temático */
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        </style>  
+</head>
+<body>
+    <h1 class = "text-center my-5">Pokémones de tipo grass</h1>
+    <table  class="table table-striped table-bordered table-hover shadow rounded">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Tipos</th>
+                <th>Peso (kg)</th>
+                <th>Altura (m)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pokemon in grassPokemon %}
+                <tr>
+                    <td>{{ pokemon.id }}</td>
+                    <td>{{ pokemon.nombre }}</td>
+                    <td>{{ pokemon.tipos }}</td>
+                    <td>{{ pokemon.peso }}</td>
+                    <td>{{ pokemon.altura }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <style>
+        .btn-pokemon {
+            background-color: #cc0000; /* Rojo Pokémon */
+            color: white;
+            border: 2px solid #2a75bb; /* Azul Pokémon */
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+        .btn-pokemon:hover {
+            background-color: #ffcb05; /* Amarillo Pokémon */
+            color: #2a75bb;
+        }
+    </style>
+    
+    <div class="hero-section">
+        <a href="/pokemon" class="btn btn-pokemon">Dashboard</a>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Pokémon App. Todos los derechos reservados.</p>
+        <p>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+        </p>
+    </footer>
+</body>
+</html>
